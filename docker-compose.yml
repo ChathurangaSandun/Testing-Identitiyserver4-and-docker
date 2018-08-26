@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  marvin.idp:
+    image: ${DOCKER_REGISTRY}marvinidp
+    build:
+      context: .
+      dockerfile: src\Marvin.IDP\Dockerfile
+    ports:
+      - "8000:8000"
